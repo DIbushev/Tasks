@@ -13,10 +13,10 @@ public class App {
         if (toBeReversed == null) {
             return null;
         }
-        String inverted = "";
+        StringBuilder inverted = new StringBuilder();
         for (int i = toBeReversed.length() - 1; i >= 0; i--) {
-            inverted += toBeReversed.charAt(i) + "";
+            inverted.append(toBeReversed.charAt(i));
         }
-        return inverted;
+        return inverted.toString();
     }
 }
