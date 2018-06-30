@@ -1,19 +1,17 @@
 package reverse;
 
+public class App {
 
-public class App 
-{
-    public static void main( String[] args )
-    {
+    public static void main(String[] args) {
         String example = "String to be reversed";
+        System.out.println("Reversed :>"+reverse(example)+"<");
+    }
+
+    private static String reverse(String toBeReversed) {
         String inverted = "";
-        
-        for(int i = example.length() - 1; i >= 0 ; i--)
-        {
-        	inverted += example.charAt(i) + "";
+        for (int i = toBeReversed.length() - 1; i >= 0; i--) {
+            inverted += toBeReversed.charAt(i) + "";
         }
-        
-        System.out.println(inverted);
-        
+        return inverted;
     }
 }
