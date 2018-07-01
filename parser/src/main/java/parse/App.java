@@ -16,11 +16,14 @@ public class App
     	
     	for(Element link : links) //prints all hrefs - URLs ; few URLs seem to be malformed
     	{
-    		System.out.println(link.attr("href"));
-    		Document opened = Jsoup.connect(link.attr("href")).get();//for final task
-    		System.out.println(opened.html());
-    	}
-    	
+            try {
+                System.out.println(link.attr("href"));
+                Document opened = Jsoup.connect(link.attr("href")).get();//for final task
+                System.out.println(opened.html());
+            } catch (Exception e) {
+                System.out.println("ERROR: " + e.getMessage());
+            }
+        }
     	
     	
         /*since I am unsure if this is what you ask, here are some additional things that could be done*/
